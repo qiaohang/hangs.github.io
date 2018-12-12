@@ -9,7 +9,7 @@ $(document).ready(function() {
     }
     var user = webURL.split(splitFlag)[1].split(".")[0];
     //user = 'yanghanqing';
-    blogListURL = 'https://api.github.com/repos/' + user + '/' + user + '.github.io/contents/blog';
+    blogListURL = 'https://api.github.com/repos/' + user + '/' + user + '.github.io/blog';
     issuesList = 'https://api.github.com/repos/' + user + '/' + user + '.github.io/issues';
     issuesHTML = 'https://github.com/' + user + '/' + user + '.github.io/issues'
     readmeURL = 'https://raw.githubusercontent.com/' + user + '/' + user + '.github.io/master/About Me.md';
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     var titleString = getTitleString();
 
-    //set Blog list    
+    //set Blog list
     $.getJSON(blogListURL, function(json) {
         for (var i = 0; i < json.length; i++) {
             var name = json[i].name; // Blog title
@@ -62,7 +62,7 @@ $(document).ready(function() {
         }
 
 
-        //set readme 
+        //set readme
         $.get(readmeURL, function(result) {
             $("#title").show();
             $("#article").html("");
@@ -110,7 +110,7 @@ function setBlogTxt(obj) {
     $("#title").text(blogName);
     $("#article").html("loading . . .");
 
-    // set blog content     
+    // set blog content
     $.get(blogURL, function(result) {
         $("#title").show();
         if (type == "markdown") {
