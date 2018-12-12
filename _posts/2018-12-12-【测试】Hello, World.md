@@ -5,7 +5,7 @@ subtitle:   Hello, World
 date:       2018-12-12
 author:     QH
 header-img:
-catalog: false
+catalog: true
 tags:
 ---
 
@@ -66,4 +66,4 @@ public:
 }
 ```
 
-![x](../img/post-bg-map.jpg "xxxxx")
+![测试](../../post-bg-map.jpg)
