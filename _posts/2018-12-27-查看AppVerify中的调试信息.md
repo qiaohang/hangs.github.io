@@ -19,7 +19,7 @@ Windows应用程序开发过程中常会使用 **AppVerify** 检测程序中的�
 ![analyze -v](../../windbg-analyze-v.png)
 
 2. vrfcore中的全局变量**ViDbgOutputBuffer**可以使用以下命令输出错误描述信息。
->**da vrfcore!ViDbgOutputBuffer**
+> da vrfcore!ViDbgOutputBuffer
 ![da vrfcore!ViDbgOutputBuffer](../../windbg-da-vidbgoutputbuffer.png)
 
 3. **AppVerify**的日志也会保存异常调试信息，日志文件可以导出保存为xml文件格式，再结合日志中的信息进行dump分析。
